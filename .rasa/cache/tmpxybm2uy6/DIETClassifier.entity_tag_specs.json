@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-advice",
+      "2": "I-advice",
+      "3": "L-advice",
+      "4": "U-advice",
+      "5": "B-disease",
+      "6": "I-disease",
+      "7": "L-disease",
+      "8": "U-disease",
+      "9": "B-symptom",
+      "10": "I-symptom",
+      "11": "L-symptom",
+      "12": "U-symptom",
+      "13": "B-treatment",
+      "14": "I-treatment",
+      "15": "L-treatment",
+      "16": "U-treatment",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-advice": 1,
+      "I-advice": 2,
+      "L-advice": 3,
+      "U-advice": 4,
+      "B-disease": 5,
+      "I-disease": 6,
+      "L-disease": 7,
+      "U-disease": 8,
+      "B-symptom": 9,
+      "I-symptom": 10,
+      "L-symptom": 11,
+      "U-symptom": 12,
+      "B-treatment": 13,
+      "I-treatment": 14,
+      "L-treatment": 15,
+      "U-treatment": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

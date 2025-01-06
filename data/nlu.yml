@@ -1,0 +1,1638 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - greetings
+    - good day
+- intent: stop
+  examples: |
+    - /stop
+    - halt
+    - end
+- intent: exit
+  examples: |
+    - exit
+    - restart
+    - start over
+
+- intent: deny
+  examples: |
+    - [no](deny)
+    - [Yes](deny)
+    - [yes](deny)
+    - [No](deny)
+    - [nope](deny)
+    - [never](deny)
+    - [No idea](deny)
+    - [no idea](deny)
+    - [I don't think so](deny)
+    - [No, I didn't](deny)
+    - [Nothing i'm aware of](deny)
+    - [No known allergies](deny)
+    - [I'm not allergic to anything as far as i know](deny)
+    - [I'm not allergic to anything](deny)
+    - [No,I have not checked temperature](deny)
+    - [I don't know](deny)
+    - [I have no idea](deny)
+    - [I didn't check](deny)
+    - [I didn't check it](deny)
+    - [i didn't check temperature](deny)
+    - [I have not done temperature check](deny)
+    - [don't know](deny)
+    - [I don't know](deny)
+    - [No idea](deny)
+    - [Not that I'm aware](deny)
+    - [Haven't noticed](deny)
+    - [Didn't see it](deny)
+    - [No way](deny)
+    - [Couldn't say](deny)
+    - [Unlikely](deny)
+    - [Not this time](deny)
+    - [Not really](deny)
+    - [Haven't done that](deny)
+    - [Not to my knowledge](deny)
+    - [That's not correct](deny)
+    - [Can't recall](deny)
+    - [Didn't happen](deny)
+    - [I haven't](deny)
+    - [No, never did](deny)
+    - [I'm not sure, but I don't think so](deny)
+    - [That's not true](deny)
+    - [No such thing](deny)
+    - [I've not experienced that](deny)
+    - [Haven't heard](deny)
+    - [Doesn't ring a bell](deny)
+    - [Haven't seen it](deny)
+    - [Wasn't me](deny)
+    - [No, not at all](deny)
+    - [Absolutely not](deny)
+    - [No confirmation on that](deny)
+    - [Never came across it](deny)
+    - [That's not the case](deny)
+    - [No, and I'm certain](deny)
+    - [Not happening](deny)
+    - [as of now i can't think of any](deny)
+    - [as of now nothing](deny)
+    - [can't think of any](deny)
+- intent: out_of_scope
+  examples: |
+    - dsnfnsdklfnds;lf
+    - djfl;dsfl;kjwp[fkwrlweknfwef
+    - abcdefghi
+    - qwerty
+    - How's your day?
+    - Hey, what's your favorite color?
+    - tell me a joke!
+    - How are you doing today?
+    - do you like music?
+    - what's your name?
+    - Hi, can we chat?
+    - Hey, any plans for the weekend?
+    - What's your favorite movie?
+    - how's the weather today?
+    - do you have any hobbies?
+    - what do you do for fun?
+    - Hi, do you believe in ghosts?
+    - Hey, tell me something interesting.
+    - what's the meaning of life?
+    - can you recommend a book?
+    - Hello, tell me a fun fact.
+    - are you good at playing games?
+    - do you like to travel?
+    - what's your favorite food?
+    - are you familiar with AI?
+    - what's your favorite song?
+    - can you dance?
+    - tell me a riddle!
+    - do you dream?
+    - can you speak any other languages?
+    - what's the best movie you've seen?
+    - have you ever been to space?
+    - tell me a bedtime story.
+    - do you know any magic tricks?
+- intent: inform_symptoms
+  examples: |
+    - I have a [headache](symptoms)
+    - [feeling chills and shivering since yesterday](symptoms)
+    - [i am feeling sick since a few days](symptoms)
+    - [down since a few weeks](symptoms)
+    - [i am not feeling well since a few months](symptoms)
+    - [not feeling well](symptoms)
+    - [cold from 4 days](symptoms)
+    - [fever from a few days](symptoms)
+    - [i have pain in in my right hand](symptoms)
+    - [i'm having cold](symptoms)
+    - [i have cold](symptoms)
+    - I've been experiencing [nausea](symptoms)
+    - Lately, there's been a [dizziness](symptoms)
+    - A constant [back pain](symptoms) is troubling me
+    - I've noticed a recurring [stomach ache](symptoms)
+    - I've had [feverish chills](symptoms) on and off
+    - My [throat](symptoms) feels scratchy
+    - I've been sneezing and have a [runny nose](symptoms)
+    - I have a continuous [cough](symptoms)
+    - There's a [tingling sensation](symptoms) in my hands
+    - My [joints](symptoms) have been aching
+    - I have a [rash](symptoms) on my back
+    - My [eyes](symptoms) have been itchy
+    - I've been having [breathing difficulties](symptoms) at night
+    - There's been a constant [ringing](symptoms) in my ears
+    - I've had this [nagging pain](symptoms) in my chest
+    - There's a [burning sensation](symptoms) in my feet
+    - I'm having [loss of appetite](symptoms)
+    - My [skin](symptoms) has been very dry
+    - I've had [heart palpitations](symptoms) occasionally
+    - I noticed [swelling](symptoms) on my ankle
+    - I'm having [frequent urination](symptoms)
+    - I've been having [night sweats](symptoms)
+    - My [muscles](symptoms) feel weak
+    - There's a [sharp pain](symptoms) in my side
+    - [i'm suffering from severe pain in my leg from the past few weeks](symptoms)
+    - I have [fatigue](symptoms) throughout the day
+    - I've been [constipated](symptoms) for days
+    - I've been having [loss of balance](symptoms)
+    - My [legs](symptoms) feel numb
+    - I've been having [frequent headaches](symptoms)
+    - [I have a headache](symptoms)
+    - [I've been experiencing nausea](symptoms)
+    - [Lately, there's been a dizziness](symptoms)
+    - [A constant back pain is troubling me](symptoms)
+    - [I've noticed a recurring stomach ache](symptoms)
+    - [I've had feverish chills on and off](symptoms)
+    - [My throat feels scratchy](symptoms)
+    - [I've been sneezing and have a runny nose](symptoms)
+    - [I have a continuous cough](symptoms)
+    - [There's a tingling sensation in my hands](symptoms)
+    - [My joints have been aching](symptoms)
+    - [I have a rash on my back](symptoms)
+    - [My eyes have been itchy](symptoms)
+    - [I've been having breathing difficulties at night](symptoms)
+    - [There's been a constant ringing in my ears](symptoms)
+    - [I've had this nagging pain in my chest](symptoms)
+    - [There's a burning sensation in my feet](symptoms)
+    - [I'm having loss of appetite](symptoms)
+    - [My skin has been very dry](symptoms)
+    - [I've had heart palpitations occasionally](symptoms)
+    - [I noticed swelling on my ankle](symptoms)
+    - [I'm having frequent urination](symptoms)
+    - [I've been having night sweats](symptoms)
+    - [My muscles feel weak](symptoms)
+    - [There's a sharp pain in my side](symptoms)
+    - [I have fatigue throughout the day](symptoms)
+    - [I've been constipated for days](symptoms)
+    - [I've been having loss of balance](symptoms)
+    - [My legs feel numb](symptoms)
+    - [I've been having frequent headaches](symptoms)  
+    - [cold](symptoms) and [cough](symptoms)
+    - [cough](symptoms)
+    - [cold](symptoms)
+    - [vomitting](symptoms)
+    - [diarreha](symptoms)
+    - [headache](symptoms), [cough](symptoms) and [stomach ache](symptoms)           
+    - [vomitting](symptoms) and [diarreha](symptoms)
+    - [diarreha](symptoms) and [vomitting](symptoms)
+    - [cough](symptoms) and [cold](symptoms)
+    - [cough](symptoms) and [stomach ache](symptoms) 
+    - [cold](symptoms) and [headache](symptoms)
+    - [cough](symptoms) and [headache](symptoms)
+    - [headache](symptoms), [cold](symptoms) and [cough](symptoms)
+    - [headache](symptoms), [cold](symptoms) and [cough](symptoms)- Besides the [fever](symptoms), I'm also experiencing a [cold](symptoms).
+    - I have [cold](symptoms)
+    - I have [cough](symptoms) and [body ache](symptoms)
+    - Along with the [fever](symptoms), I have [headaches](symptoms) and [cough](symptoms).
+    - I'm [coughing](symptoms), experiencing a [cold](symptoms), and have a slight [body ache](symptoms).
+    - I have [chills](symptoms) along with the [fever](symptoms).
+    - The [fever](symptoms) is accompanied by [nausea](symptoms) and [vomiting](symptoms).
+    - i have [cold](symptoms)
+    - i have [body ache](symptoms)
+    - Yes, i have [diarrhea](symptoms) also.
+    - Yes, i have [diarrhea](symptoms).
+    - yes, i have [vomitting](symptoms)
+    - I have [diarreha](symptoms).
+    - i have [voitting](symptoms).
+    - Yes, i have both [diarrhea](symptoms) and [vomitting](symptoms)
+    - i am [coughing](symptoms)  
+    - [i am feeling lathargic right now](symptoms)
+- intent: inform_medication_status
+  examples: |
+    - [I'm diligently taking my medications](medication_status)
+    - [No, I haven't been consistent with meds](medication_status)
+    - [I missed my medicine today](medication_status)
+    - [I always take my drugs on time](medication_status)
+    - [Occasionally, I forget my medications](medication_status)
+    - [I've not been on any medications recently](medication_status)
+    - [Yes, I follow the prescription strictly](medication_status)
+    - [I sometimes double up on medication when I feel worse](medication_status)
+    - [I've stopped my medications for a week](medication_status)
+    - [Took my pills this morning](medication_status)
+    - [I lost my medicine bottle](medication_status)
+    - [Never missed a single dose](medication_status)
+    - [I've been lazy with my medications this month](medication_status)
+    - [I took an extra pill today by mistake](medication_status)
+    - [I'm considering stopping my medications](medication_status)
+    - [I've taken my prescription diligently](medication_status)
+    - [Sometimes I take an extra dose](medication_status)
+    - [I've run out of my medicines](medication_status) 
+    - [Rarely do I forget to take them](medication_status)
+    - [I'm not sure if the medication is working](medication_status)
+    - [Yesterday, I forgot my dose](medication_status)
+    - [I've been consistent with my treatment](medication_status)
+    - [I have a few side effects from the medication](medication_status)
+    - [I took two tablets instead of one](medication_status)
+    - [I've not taken my meds for days](medication_status)
+    - [My prescription is almost over](medication_status)
+    - [I'm thinking of changing my medication](medication_status)
+    - [Last week, I had an overdose](medication_status)
+    - [I haven't picked up my new medication yet](medication_status)
+    - [I'm on a new drug regime](medication_status)   
+    - [This issue has been bothering me for 9 months](medication_status)
+    - [I began feeling this way about a week ago](medication_status)
+    - [The symptoms appeared 3 days back](medication_status)
+    - [It's been 11 days since the pain began](medication_status)
+    - [I've felt like this for roughly 2 hours](medication_status)
+    - [I noticed it 30 minutes ago](medication_status)
+    - [I've had these sensations for around a month](medication_status)
+    - [The problem has persisted for 12 weeks](medication_status)
+    - [It's been 4 days since these symptoms started](medication_status)
+    - [The issue has been there for 9 weeks](medication_status)
+    - [I first felt it 24 hours ago](medication_status)
+    - [I've been facing this for over a year](medication_status)
+    - [The symptoms began 16 days ago](medication_status)
+    - [It started 5 weeks back](medication_status)
+    - [This has been ongoing for 18 days](medication_status)
+    - [It's been bothering me for 3 months](medication_status)
+    - [I've felt this way for 7 months](medication_status)
+    - [The discomfort initiated one week ago](medication_status)
+    - [I've been going through this for 13 days](medication_status)
+    - [Symptoms have been present for 40 days](medication_status)
+    - [from past three or four days](medication_status)
+    - I'm diligently taking my [medications](medication_status)
+    - [No, I haven't](medication_status) been consistent with meds
+    - I missed my [medicine](medication_status) today
+    - I always take my [drugs](medication_status) on time
+    - Occasionally, I forget my [medications](medication_status)
+    - I've not been on any [medications](medication_status) recently
+    - I follow the prescription strictly(medication_status)
+    - I sometimes double up on [medication](medication_status) when I feel worse
+    - I've stopped my [medications](medication_status) for a week
+    - Took my [pills](medication_status) this morning
+    - I lost my [medicine](medication_status) bottle
+    - [Never](medication_status) missed a single dose
+    - I've been lazy with my [medications](medication_status) this month
+    - I took an extra [pill](medication_status) today by mistake
+    - I'm considering stopping my [medications](medication_status)
+    - I've taken my [prescription](medication_status) diligently
+    - [Sometimes](medication_status) I take an extra dose
+    - I've run out of my [medicines](medication_status) 
+    - [Rarely](medication_status) do I forget to take them
+    - I'm not sure if the [medication](medication_status) is working
+    - [Yesterday](medication_status), I forgot my dose
+    - I've been consistent with my [treatment](medication_status)
+    - I have a few side effects from the [medication](medication_status)
+    - I took two [tablets](medication_status) instead of one
+    - I've not taken my [meds](medication_status) for days
+    - My [prescription](medication_status) is almost over
+    - I'm thinking of changing my [medication](medication_status)
+    - [Last week](medication_status), I had an overdose
+    - I haven't picked up my new [medication](medication_status) yet
+    - I'm on a new [drug](medication_status) regime    
+    - [I'm diligently taking my medications](medication_status)
+    - [No I haven't been consistent with meds](medication_status)
+    - [I missed my medicine today](medication_status)
+    - [I always take my drugs on time](medication_status)
+    - [Occasionally I forget my medications](medication_status)
+    - [I've not been on any medications recently](medication_status)
+    - [Yes I follow the prescription strictly](medication_status)
+    - [I sometimes double up on medication when I feel worse](medication_status)
+    - [I've stopped my medications for a week](medication_status)
+    - [Took my pills this morning](medication_status)
+    - [I lost my medicine bottle](medication_status)
+    - [Never missed a single dose](medication_status)
+    - [I've been lazy with my medications this month](medication_status)
+    - [I took an extra pill today by mistake](medication_status)
+    - [I'm considering stopping my medications](medication_status)
+    - [I've taken my prescription diligently](medication_status)
+    - [Sometimes I take an extra dose](medication_status)
+    - [I've run out of my medicines](medication_status) 
+    - [Rarely do I forget to take them](medication_status)
+    - [I'm not sure if the medication is working](medication_status)
+    - [Yesterday I forgot my dose](medication_status)
+    - [I've been consistent with my treatment](medication_status)
+    - [I have a few side effects from the medication](medication_status)
+    - [I took two tablets instead of one](medication_status)
+    - [I've not taken my meds for days](medication_status)
+    - [My prescription is almost over](medication_status)
+    - [I'm thinking of changing my medication](medication_status)
+    - [Last week I had an overdose](medication_status)
+    - [I haven't picked up my new medication yet](medication_status)
+    - [I'm on a new drug regime](medication_status)   
+    - This issue has been bothering me for [9 months](medication_status).
+    - I began feeling this way [about a week](medication_status) ago.
+    - The symptoms appeared [3 days](medication_status) back.
+    - It's been [11 days](medication_status) since the pain began.
+    - I've felt like this for roughly [2 hours](medication_status).
+    - I noticed it [30 minutes](medication_status) ago.
+    - I've had these sensations for [around a month](medication_status).
+    - The problem has persisted for [12 weeks](medication_status).
+    - It's been [4 days](medication_status) since these symptoms started.
+    - The issue has been there for [9 weeks](medication_status).
+    - I first felt it [24 hours](medication_status) ago.
+    - I've been facing this for [over a year](medication_status).
+    - The symptoms began [16 days](medication_status) ago.
+    - It started [5 weeks](medication_status) back.
+    - This has been ongoing for [18 days](medication_status).
+    - It's been bothering me for [3 months](medication_status).
+    - I've felt this way for [7 months](medication_status).
+    - The discomfort initiated [one week](medication_status) ago.
+    - I've been going through this for [13 days](medication_status).
+    - Symptoms have been present for [40 days](medication_status).       
+    - [from past three or four days](medication_status)
+    - The symptoms first appeared [about 45 minutes](medication_status) ago.
+    - I felt it for the first time [last night](medication_status).
+    - [Approximately 6 days](medication_status) back, I started feeling this.
+    - I've been dealing with this [since Monday](medication_status).
+    - [Almost 12 hours](medication_status) now.
+    - This has been a concern for [over two weeks](medication_status).
+    - [since last month](medication_status)
+    - [Ever since last weekend](medication_status) I've felt this.
+    - I've had this sensation [since yesterday afternoon](medication_status).
+    - [Just this morning](medication_status), I noticed it.
+    - It's been bothering me for [the last two months](medication_status).
+    - I began experiencing this [roughly 3 months](medication_status) ago.
+    - It's been like this [since the winter began](medication_status).
+    - [A week or so](medication_status) has passed since the symptoms appeared.
+    - This problem started [earlier this month](medication_status).
+    - I've had this feeling for the [past few evenings](medication_status).
+    - I first felt the discomfort [during the summer](medication_status).
+    - The pain has persisted for [around 20 weeks](medication_status).
+    - It began [a few months after my last visit](medication_status).
+    - [Ever since the holiday](medication_status) I've felt off.
+    - [Barely an hour](medication_status) ago, I felt it.
+    - I've been going through this [almost every day](medication_status) for the last month.
+    - [Since last year's end](medication_status) I've been noticing this.
+    - I've felt this way [off and on](medication_status) for a year.
+    - The discomfort began [after the accident two weeks ago](medication_status).
+    - [Every morning for the past month](medication_status) I've felt it.
+    - I noticed the change in my health [around 9 days back](medication_status).
+    - I've been dealing with this [since the spring season](medication_status).
+    - [For the last quarter](medication_status) I've had these symptoms.
+    - It began to manifest [about 50 days ago](medication_status).
+    - This has been on and off [since September](medication_status).
+    - [may be from last week](medication_status)
+    - [it's been going on for a while now](medication_status)
+    - [few years now](medication_status)
+    - [few years](medication_status)
+    - [do not exactly remember but it's been a long and painful couple of days](medication_status)
+    - [couple of days](medication_status)
+    - [occasionally](medication_status)
+- intent: inform_lifestyle_changes
+  examples: |
+    - [I've recently switched to a vegetarian diet.](lifestyle_changes)
+    - [Not much, just started working from home this month.](lifestyle_changes)
+    - [I've been exercising more frequently in the past few weeks.](lifestyle_changes)
+    - [I started jogging every morning last month.](lifestyle_changes)
+    - [I've cut out dairy from my diet recently.](lifestyle_changes)
+    - [Not much, just reduced caffeine intake.](lifestyle_changes)
+    - [I've been traveling a lot for work lately.](lifestyle_changes)
+    - [Switched to a night-shift job last week.](lifestyle_changes)
+    - [Started meditation and yoga for stress relief.](lifestyle_changes)
+    - [Jogging](lifestyle_changes)
+    - [Vegetarian](lifestyle_changes)
+    - [No caffeine](lifestyle_changes)
+    - [Traveling](lifestyle_changes)
+    - [Night-shift](lifestyle_changes)
+    - [Yoga](lifestyle_changes)
+    - [Moved](lifestyle_changes)
+    - [Fasting](lifestyle_changes)
+    - [Quit smoking](lifestyle_changes)
+    - [Keto](lifestyle_changes)
+    - [Hiking](lifestyle_changes)
+    - (lifestyle_changes)
+    - [Swimming](lifestyle_changes)
+    - [Sleep-deprived](lifestyle_changes)
+    - [Dancing](lifestyle_changes)
+    - [Healthier diet](lifestyle_changes)
+    - [i've been pretty outgoing lately](lifestyle_changes)
+    - [not really except that I have started a low caloric diet than earlier as i am trying to lose weight](lifestyle_changes)
+    - [Moved to a new city a couple of months ago.](lifestyle_changes)
+    - [I've been following intermittent fasting for weight loss.](lifestyle_changes)
+    - [I stopped smoking three weeks ago.](lifestyle_changes)
+    - [Recently, I've been on a strict keto diet.](lifestyle_changes)
+    - [Been spending more time outdoors hiking and camping.](lifestyle_changes)
+    - [I've taken up swimming as a regular exercise.](lifestyle_changes)
+    - [I've been sleeping less due to project deadlines.](lifestyle_changes)
+    - [Started attending dance classes for fun.](lifestyle_changes)
+    - [I've incorporated more fruits and veggies into my meals.](lifestyle_changes) 
+    - [I've been walking 10,000 steps daily for a challenge.](lifestyle_changes)
+    - [Took up a new sport – badminton.](lifestyle_changes)
+    - [Started a vegan diet.](lifestyle_changes)
+    - [I've been cycling to work.](lifestyle_changes)
+    - [I joined a gym two months ago.](lifestyle_changes)
+    - [Decided to go gluten-free recently.](lifestyle_changes)
+    - [I've stopped consuming alcohol for the past month.](lifestyle_changes)
+    - [Been practicing mindfulness exercises daily.](lifestyle_changes)
+    - [Adopted a pet which makes me more active at home.](lifestyle_changes)
+    - [Started taking vitamins and supplements.](lifestyle_changes)
+    - [I've been doing pilates twice a week.](lifestyle_changes)
+    - [Switched to decaf.](lifestyle_changes)
+    - [Joined a reading club and have reduced screen time.](lifestyle_changes)
+    - [I've limited my sugar intake recently.](lifestyle_changes)
+    - [Been following a paleo diet.](lifestyle_changes)
+    - [Got into rock climbing.](lifestyle_changes)
+    - [Reduced my meat consumption, now eating meat only once a week.](lifestyle_changes)
+    - [I've been gardening a lot lately.](lifestyle_changes)
+    - [Started drinking green tea instead of coffee.](lifestyle_changes)
+    - [I've adopted a minimalist lifestyle.](lifestyle_changes)
+    - [Took up Tai Chi classes.](lifestyle_changes)
+    - [Started a raw food diet.](lifestyle_changes)
+    - [I now do a digital detox every weekend.](lifestyle_changes)
+    - [I've been volunteering on weekends which keeps me quite active.](lifestyle_changes)
+    - [Switched to an organic diet.](lifestyle_changes)
+    - [Started water aerobics classes.](lifestyle_changes)
+    - [I've cut out processed foods from my diet.](lifestyle_changes)
+    - [Started attending Zumba sessions.](lifestyle_changes)
+    - [I've been focusing on mental health with regular therapy.](lifestyle_changes)
+    - [Reduced my carb intake significantly.](lifestyle_changes)
+    - [Got a standing desk for work.](lifestyle_changes) 
+    - [yeah recenty i have travelled a lot](lifestyle_changes)
+    - [travelled a lot](lifestyle_changes)
+    - [i have shifted a lot the past few days](lifestyle_changes)
+    - [i have moved a lot since the last month](lifestyle_changes)
+    - [i've started going to my office](lifestyle_changes)
+    - [yes , recently a lot of changes in my sleeping habit and eating pattern](lifestyle_changes)
+    - [sleeping pattern](lifestyle_changes)
+    - [eating habits](lifestyle_changes)
+    - [started eating more food that contains iron and also i've stopped drinking wine and alcohol](lifestyle_changes)
+    - [i've started jogging](lifestyle_changes)
+- intent: inform_consultation
+  examples: |
+    - [had an online consultation](consultation)
+    - [online consultation](consultation)
+    - [Doctor](consultation)
+    - [GP](consultation)
+    - [Specialist](consultation)
+    - [Nurse](consultation)
+    - [Online](consultation)
+    - [Dermatologist](consultation)
+    - [Physiotherapist](consultation)
+    - [Awaiting results](consultation)
+    - [Allergies](consultation)
+    - [Stress](consultation)
+    - [Bronchitis](consultation)
+    - [Viral](consultation)
+    - [Telehealth](consultation)      
+    - [yeah i had just gone to a clinic](consultation)
+    - [family doctor](consultation)
+    - [yeah with a family doctor](consultation)
+    - [i had a online consultancy](consultation)
+    - [online consultant](consultation)
+    - [Yes, I've consulted my doctor and he said it's a viral infection.](consultation)
+    - [No, I haven't seen any healthcare professional yet.](consultation)
+    - [I saw a specialist last week who diagnosed it as bronchitis.](consultation)
+    - [I discussed with my GP, and she thinks it's just stress.](consultation)
+    - [Yes, I visited the hospital, and they ran some tests. Awaiting results.](consultation)
+    - [I spoke with a nurse practitioner who said it might be an allergic reaction.](consultation)
+    - [No, I haven't, but I'm planning to see someone next week.](consultation)
+    - [I did a telehealth session, and they recommended some rest.](consultation)
+    - [I consulted online, and it's said to be flu.](consultation)
+    - [Saw a physician recently who suspects it could be due to my diet.](consultation)
+    - [No, but I did a self-assessment online.](consultation)
+    - [Yes, and they think it's anxiety-related.](consultation)
+    - [I'm scheduled to see a specialist about it tomorrow.](consultation)
+    - [Met with a dermatologist who said it might be eczema.](consultation)
+    - [Yes, it's been diagnosed as GERD.](consultation)
+    - [Haven't yet, but my physiotherapist gave some advice.](consultation)
+    - [No professional consultations, just some pharmacy advice.](consultation)
+    - [Spoke with a cardiologist, awaiting some test results.](consultation)
+    - [Went to a chiropractor recently for back issues.](consultation)
+    - [Had a session with a nutritionist who suggested some dietary changes.](consultation)
+    - [Went to an ophthalmologist for my eye issues.](consultation)
+    - [Had a chat with an online therapist.](consultation)
+    - [Yes, and they ran a blood test.](consultation)
+    - [Saw an endocrinologist about potential thyroid issues.](consultation)
+    - [Had a teleconsultation with an ENT specialist.](consultation)
+    - [Got advice from a pediatrician for my child's health.](consultation)
+    - [Yes, I went to an urgent care center over the weekend.](consultation)
+    - [Saw a podiatrist for my foot pain.](consultation)
+    - [I went to a clinic; they said it's probably sinusitis.](consultation)
+    - [Consulted a psychiatrist about my mood swings.](consultation)
+    - [My orthodontist said it's related to my braces adjustment.](consultation)
+    - [Had an X-ray done, the radiologist will discuss the findings soon.](consultation)
+    - [Saw a rheumatologist for my joint pain.](consultation)
+    - [Yes, met with a gynecologist recently.](consultation)
+    - [Had a virtual consultation with a psychologist.](consultation)
+    - [Got some tests done at a diagnostic center; they'll call with results.](consultation)
+    - [Visited an orthopedic surgeon about my knee pain.](consultation)
+    - [The pharmacist suggested an over-the-counter medicine.](consultation)
+    - [Had a brief chat with a dietician about nutrition.](consultation)
+    - [My dentist suspects it might be a cavity.](consultation)
+    - [Consulted an audiologist for my hearing issue.](consultation)
+    - [Went to a sleep clinic for my insomnia.](consultation)
+    - [Visited an oncologist; they're running more tests.](consultation)
+    - [Had an ECG done at the cardiology department.](consultation)
+    - [My trainer at the gym gave some advice, but I'll see a doctor too.](consultation)
+    - [Had a chat with a neurologist about frequent headaches.](consultation)
+    - [Yes, my acupuncturist gave some insights, but I'll see a GP too.](consultation)
+    - [didn't think it was necessary](consultation)
+    - [Went to a pulmonologist due to my shortness of breath.](consultation)
+    - [no just my friends and coworkers](consultation)
+    - [self medicine](consultation)
+- intent: inform_medical_history
+  examples: |
+    - [My mother had similar symptoms, might be hereditary.](medical_history)
+    - [pnuemonia, used to take drugs](medical_history)
+    - [pnuemonia](medical_history)
+    - [I've had asthma since I was a child.](medical_history)
+    - [No pre-existing conditions or family history related to this.](medical_history)
+    - [My dad had diabetes, and I'm worried about that.](medical_history)
+    - [I underwent surgery for a hernia last year.](medical_history)
+    - [I've been diagnosed with thyroid issues in the past.](medical_history)
+    - [I've had recurrent bouts of tonsillitis as a kid.](medical_history)
+    - [There's a history of arthritis in my family.](medical_history)
+    - [I suffered from chickenpox when I was ten.](medical_history)
+    - [Diabetes](medical_history)
+    - [Surgery](medical_history)
+    - [Thyroid](medical_history)
+    - [Tonsillitis](medical_history)
+    - [Arthritis](medical_history)
+    - [Chickenpox](medical_history)
+    - [Depression](medical_history)
+    - [i'm getting nausea everyday](medical_history)
+    - [Fractures](medical_history)
+    - [Alzheimer's](medical_history)
+    - [Dengue](medical_history)
+    - [Anemia](medical_history)
+    - [stomache, everyday](medical_history)
+    - [pain in my body for the past few months](medical_history)
+    - [my family is full of patients](medical_history)
+    - [Hypertension](medical_history)
+    - [PCOS](medical_history)
+    - [no similar history](medical_history)
+    - [Pneumonia](medical_history)
+    - [Gluten intolerance](medical_history)
+    - [Been treated for depression during my college years.](medical_history)
+    - [I've had two fractures in the past five years.](medical_history)
+    - [My grandmother had Alzheimer's, which is a concern for me.](medical_history)
+    - [I was hospitalized for dengue fever three years back.](medical_history)
+    - [I have a history of anemia and take iron supplements.](medical_history)
+    - [Both my parents have high blood pressure.](medical_history)
+    - [I've been diagnosed with PCOS in my early twenties.](medical_history)
+    - [Had a bout of pneumonia when I was younger.](medical_history)
+    - [My sister has similar symptoms due to gluten intolerance.](medical_history)
+    - [I had mumps during my childhood.](medical_history)
+    - [I was diagnosed with osteoporosis two years ago.](medical_history)
+    - [I've had allergic reactions to certain medications in the past.](medical_history)
+    - [There's a history of breast cancer on my mother's side.](medical_history)
+    - [I suffered from a major concussion in high school.](medical_history)
+    - [I've been on medication for bipolar disorder for a decade.](medical_history)
+    - [I was born with a congenital heart defect.](medical_history)
+    - [Had gallstones and underwent gallbladder removal.](medical_history)
+    - [I've been managing my Crohn's disease for several years.](medical_history)
+    - [I've had frequent migraines since my teenage years.](medical_history)
+    - [My brother was diagnosed with muscular dystrophy.](medical_history)
+    - [Had cataract surgery in my right eye last year.](medical_history)
+    - [I've been receiving treatment for rheumatoid arthritis.](medical_history)
+    - [There's a family history of Parkinson's disease.](medical_history)
+    - [I've been diagnosed with chronic kidney disease stage 3.](medical_history)
+    - [Had a severe bout of tuberculosis in my twenties.](medical_history)
+    - [My uncle died from a sudden cardiac arrest, so I'm cautious.](medical_history)
+    - [I've dealt with acid reflux and GERD symptoms for years.](medical_history)
+    - [I was treated for Lyme disease after a tick bite a few years back.](medical_history)
+    - [Multiple sclerosis runs in my family.](medical_history)
+    - [I've had persistent back pain due to a slipped disc.](medical_history)
+    - [I've undergone chemotherapy for Hodgkin's lymphoma.](medical_history)
+    - [Have been living with Type 1 diabetes since childhood.](medical_history)
+    - [I had a liver transplant due to cirrhosis.](medical_history)
+    - [My cousin has cystic fibrosis, and I've been tested for it.](medical_history)
+    - [Dealt with postpartum depression after my second child.](medical_history)
+    - [Was diagnosed with lupus after unusual rashes and fatigue.](medical_history)
+    - [My grandfather had early-onset Alzheimer's.](medical_history)
+    - [I'm on anticoagulants due to deep vein thrombosis history.](medical_history)
+    - [I had laser eye surgery to correct myopia last year.](medical_history)
+    - [tuberculosis](medical_history)
+    - [discovered recently about my parents' diabtetic conditions](medical_history)
+- intent: inform_current_medication
+  examples: |
+    - [I'm currently on antibiotics for this cough.](current_medication)
+    - [im taking cheston cold from last 2 days](current_medication)
+    - [cheston cold](current_medication)
+    - [[im taking vicks from last week](current_medication)
+    - [[im taking meds since last two days](current_medication)
+    - [No medications at the moment, just some over-the-counter pain relievers.](current_medication)
+    - [I've been prescribed some antihistamines for my allergies.](current_medication)
+    - [Taking antacids for the heartburn.](current_medication)
+    - [Just some vitamin supplements.](current_medication)
+    - [I'm using a prescription cream for the skin irritation.](current_medication)
+    - [No, but I've been using a lot of herbal remedies.](current_medication)
+    - [Yes, some pills for blood pressure.](current_medication)
+    - [Been using an inhaler for the shortness of breath.](current_medication)
+    - [Only homeopathic treatments currently.](current_medication)
+    - [I got some ointments and painkillers.](current_medication)
+    - [I've started insulin shots recently.](current_medication)
+    - [Antibiotics](current_medication)
+    - [Painkillers](current_medication)
+    - [Antihistamines](current_medication)
+    - [Vitamins](current_medication)
+    - [Cream](current_medication)
+    - [Homeopathy](current_medication)
+    - [Inhaler](current_medication)
+    - [Insulin](current_medication)
+    - [Steroids](current_medication)
+    - [Antifungals](current_medication)
+    - [Antidepressants](current_medication)
+    - [Nasal spray](current_medication)
+    - [Muscle relaxants](current_medication)
+    - [Been on antifungals for a foot infection.](current_medication)
+    - [Taking antidepressants for a few months now.](current_medication)
+    - [Using a nasal spray for my sinus issues.](current_medication)
+    - [Been prescribed a course of steroids.](current_medication)
+    - [On some muscle relaxants for back pain.](current_medication)
+    - [Taking pain meds for migraines.](current_medication)
+    - i am taking [Dolo](current_medication)
+    - yes, i have taken [dolo](current_medication)
+    - yes, i have taken [paracetamol](current_medication)
+    - Yes i'm taking [Crocin](current_medication) from past 2 days.
+    - Yes i'm taking [dolo 650](current_medication) from past 4 days.
+    - i am taking [Dolo 650](current_medication) 
+    - i took [dolo 650](current_medication)  
+    - i took [vicks tablet](current_medication)  
+    - i took [vicks action 500](current_medication) 
+    - I'm taking [paracetamol](current_medication)                      
+    - Yes, I take [medication for my asthma](current_medication) 
+    - I'm on a [prescription for my heart condition](current_medication)                             
+    - Currently, I'm using [medication to manage my diabetes](current_medication)
+    - I have a [prescription for my allergies](current_medication)
+    - I'm taking [meds for my chronic pain](current_medication)
+    - [yes, im taking antibiotics](current_medication)
+    - Yes, I'm on [medication to control my cholesterol](current_medication) 
+    - I'm using [medication to treat my anxiety](current_medication)
+    - I am taking my [diabetes tablets](current_medication)
+    - i take [insulin injection](current_medication) daily
+    - I take [sleeping pills](current_medication)
+    - i take [Gastic-plus](current_medication) for my gastric problem
+    - I'm taking [medicine for gastric](current_medication) problem
+    - I take [medicine for thyroid](current_medication) issue
+    - I took [Crocin](current_medication) yesterday
+    - [Dolo 650](current_medication)
+    - [yes, i'm taking birth control pills](current_medication)
+    - [pills](current_medication)
+    - [Paracetamol](current_medication)
+    - [BP tablets](current_medication)
+    - [Crocin](current_medication)
+    - i have taken [pain killer](current_medication) today
+    - i have taken my [BP tablets](current_medication) and  [Dolo](current_medication)
+    - [I've been using eye drops for the dryness.](current_medication)
+    - [I've been taking iron supplements for anemia.](current_medication)
+    - [I take birth control pills daily.](current_medication)
+    - [Only on my thyroid medication.](current_medication)
+    - [Been taking statins to control my cholesterol.](current_medication)
+    - [Taking mood stabilizers for bipolar disorder.](current_medication)
+    - [I'm on a calcium channel blocker for hypertension.](current_medication)
+    - [Currently on anticoagulants post-surgery.](current_medication)
+    - [I use a medicated shampoo for dandruff.](current_medication)
+    - [Yes, I'm taking antiretroviral medications.](current_medication)
+    - [Been prescribed diuretics to reduce water retention.](current_medication)
+    - [I take beta-blockers for my heart palpitations.](current_medication)
+    - [Been applying a corticosteroid ointment for the rash.](current_medication)
+    - [Currently on oral rehydration salts for dehydration.](current_medication)
+    - [I'm using a medicated mouthwash for gum inflammation.](current_medication)
+    - [Been on mood stabilizers for my mood swings.](current_medication)
+    - [I'm taking anti-seizure medications.](current_medication)
+    - [I use laxatives occasionally due to constipation.](current_medication)
+    - [I'm on hormone replacement therapy.](current_medication)
+    - [Yes, I take melatonin for sleep irregularities.](current_medication)
+    - [Currently on oral steroids for an autoimmune condition.](current_medication)
+    - [Been taking meds for acid reflux for a while now.](current_medication)
+    - [I'm using ear drops for an ear infection.](current_medication)
+    - [I'm on antivirals for herpes.](current_medication)
+    - [Been on calcium supplements post my bone fracture.](current_medication)
+    - [Taking antipsychotics as prescribed by my psychiatrist.](current_medication)
+    - [I apply sunscreen medicated for sensitive skin.](current_medication)
+    - [I take fish oil capsules for omega-3.](current_medication)
+    - [Been using a nasal decongestant due to a cold.](current_medication)
+    - [I'm on contraceptives.](current_medication)
+    - [a few different meds](current_medication)
+    - [cough syrup](current_medication)
+    - [yup went for surgery but it was 5 years back now as of nothing](current_medication)
+    - [surgery](current_medication)
+- intent: inform_environmental_factors
+  examples: |
+    - [There's been a lot of construction dust around my place recently.](environmental_factors)
+    - [I recently moved to a more polluted area, could be due to that.](environmental_factors)
+    - [We've had a mold issue in our home which might be a factor.](environmental_factors)
+    - [We recently had a pest control treatment at home.](environmental_factors)
+    - [I've noticed increased pollution levels in my area.](environmental_factors)
+    - [There's been a gas leak in my neighborhood last week.](environmental_factors)
+    - [I live close to a factory, and sometimes there's a strange smell.](environmental_factors)
+    - [My office building is quite old and has poor ventilation.](environmental_factors)
+    - [We had water damage recently, and I suspect mold growth.](environmental_factors)
+    - [I've been exposed to secondhand smoke at my friend's place.](environmental_factors)
+    - [There's been continuous loud construction noise nearby.](environmental_factors)
+    - [Pesticides](environmental_factors)
+    - [Pollution](environmental_factors)
+    - [Gas leak](environmental_factors)
+    - [Factory](environmental_factors)
+    - [Old building](environmental_factors)
+    - [Mold](environmental_factors)
+    - [Secondhand smoke](environmental_factors)
+    - [Construction](environmental_factors)
+    - [Detergent](environmental_factors)
+    - [Pet](environmental_factors)
+    - [Pollen](environmental_factors)
+    - [Farm](environmental_factors)
+    - [Pesticides](environmental_factors)
+    - [sometime weather change and sometimes late sleeping habbit](environmental_factors)
+    - [Dirty pool](environmental_factors)
+    - [Smog](environmental_factors)
+    - [I started using a new laundry detergent last month.](environmental_factors)
+    - [I recently got a new pet, and I'm adjusting to it.](environmental_factors)
+    - [The pollen count has been high in my city this spring.](environmental_factors)
+    - [I visited a farm and was exposed to a lot of animals.](environmental_factors)
+    - [My neighbor's been spraying a lot of pesticides in their garden.](environmental_factors)
+    - [I've been swimming in a public pool which seemed unclean.](environmental_factors)
+    - [There's been a lot of forest fires causing smog recently.](environmental_factors)
+    - [cold weather]
+    - [dust]
+    - [dusty]
+    - [heavy rain]
+    - [down pour](environmental_factors)
+    - [windy](environmental_factors)
+    - [heavy snow](environmental_factors)
+    - [snow](environmental_factors)
+    - [been a little dusty around the house](environmental_factors)
+    - [There's a new highway construction nearby, maybe it's the pollution.](environmental_factors)
+    - [I traveled to a high-altitude area last month.](environmental_factors)
+    - [I've been spending time near a farm with lots of pesticide use.](environmental_factors)
+    - [There's been a landfill site near my house causing a stench.](environmental_factors)
+    - [My new job location is near a chemical plant.](environmental_factors)
+    - [Been experiencing a heatwave in my city lately.](environmental_factors)
+    - [I live by the beach and have been experiencing high humidity.](environmental_factors)
+    - [My neighborhood recently got fumigated for mosquitoes.](environmental_factors)
+    - [A lot of trees were cut down in my locality recently.](environmental_factors)
+    - [I've been in contact with animals at a local zoo.](environmental_factors)
+    - [I recently painted my house and the fumes were intense.](environmental_factors)
+    - [Road tar](environmental_factors)
+    - [House paint](environmental_factors)
+    - [Wild animal contact](environmental_factors)
+    - [Chemical waste dump](environmental_factors)
+    - [Acid rain](environmental_factors)
+    - [Exposed to asbestos in an old building.](environmental_factors)
+    - [I've been camping in a forest with lots of insects.](environmental_factors)
+    - [Exposure to a chemical spill on the highway last week.](environmental_factors)
+    - [My home's heater emits a strange odor when switched on.](environmental_factors)
+    - [A lot of cars have been idling near my home lately.](environmental_factors)
+    - [Been exposed to UV rays during my beach vacation.](environmental_factors)
+    - [Stagnant water](environmental_factors)
+    - [Insecticides](environmental_factors)
+    - [I visited a volcanic region with strong sulfur odors.](environmental_factors)
+    - [Exposed to radioactive materials during a lab visit.](environmental_factors)
+    - [There's a coal plant near my place, causing ash fallouts.](environmental_factors)
+    - [I've been working in a mine and exposed to various minerals.](environmental_factors)
+    - [A sewage line broke near my house last month.](environmental_factors)
+    - [weather change]
+    - [There have been chemical discharges into the river nearby.](environmental_factors)
+    - [yes, weather is not so good](environmental_factors)
+    - [there's been a lot of rain my area recently](environmental_factors)
+    - [yes, it's raining](environmental_factors)
+- intent: submit_medical_form
+  examples: |
+    - I am feeling [good]
+    - [good]
+    - [bad]
+    - [better]
+    - [great]
+    - I'm in a [blue] mood today
+    - My spirits have been [uplifting] recently
+    - [feeling horrendous]
+    - [I am feeling bad]
+    - [I am feeling]
+    - It's been a [downcast] week for me
+    - I've been [ecstatic] lately
+    - Today is a [happy] day for me
+    - I've been feeling [drained]
+    - I feel quite [thrilled] about life
+    - My mood is [okay] today
+    - I've been in a [peppy] mood
+    - I'm feeling very [bleak] recently
+    - I'm on top of the world, feeling [superb]
+    - I'm in a [downhearted] state right now
+    - I've been [contented] with everything
+    - Today's mood is [blissful] for me
+    - Lately, things have been [meh] for me
+    - I'm [satisfied] with how things are
+    - I've felt [despondent] these days
+    - I'm [excited] about tomorrow
+    - My overall mood is [relaxed] today
+    - Today, I feel [fantastic]
+    - My spirits are quite [high] today
+    - Lately, I've been [down]
+    - I've been [sad] for no reason
+    - Feeling a bit [low] these days
+    - My mood has been very [upbeat]
+    - I'm not feeling my best, quite [miserable] actually
+    - I've been on cloud nine, feeling [excellent]
+    - It's a [sunny] mood for me today
+    - I have been [depressed] lately
+    - My day has been [amazing]
+    - I'm in a [cheerful] mood
+    - Feeling quite [dull] today
+    - I'm in a [morose] state these days
+    - These days, I'm [elated]
+    - I've been feeling [hopeful] lately
+    - My mood is rather [sombre]
+    - I've been feeling [anxious] all day
+    - It's a [gloomy] day for me
+    - Lately, I've felt very [optimistic]
+    - My spirits have been [dismal] this week
+    - I've been [joyful] these past few days
+    - I've felt pretty [neutral] recently
+    - My emotions have been very [volatile]
+    - I feel [content] with life
+    - Today, I'm [indifferent] to everything
+    - My spirits are [lackluster] lately
+    - Lately, I've felt [frustrated]
+    - I'm having a [melancholic] day    
+    - I have a [headache](symptoms)
+    - [not feeling well](symptoms)
+    - [i have pain in in my right hand](symptoms)
+    - [i'm having cold](symptoms)
+    - [i am feeling lathargic right now](symptoms)
+    - [i have cold](symptoms)
+    - [i'm suffering from severe pain in my leg from the past few weeks](symptoms)
+    - I've been experiencing [nausea](symptoms)
+    - Lately, there's been a [dizziness](symptoms)
+    - A constant [back pain](symptoms) is troubling me
+    - I've noticed a recurring [stomach ache](symptoms)
+    - I've had [feverish chills](symptoms) on and off
+    - My [throat](symptoms) feels scratchy
+    - I've been sneezing and have a [runny nose](symptoms)
+    - I have a continuous [cough](symptoms)
+    - There's a [tingling sensation](symptoms) in my hands
+    - My [joints](symptoms) have been aching
+    - I have a [rash](symptoms) on my back
+    - [feeling chills and shivering since yesterday](symptoms)
+    - My [eyes](symptoms) have been itchy
+    - I've been having [breathing difficulties](symptoms) at night
+    - There's been a constant [ringing](symptoms) in my ears
+    - I've had this [nagging pain](symptoms) in my chest
+    - There's a [burning sensation](symptoms) in my feet
+    - I'm having [loss of appetite](symptoms)
+    - My [skin](symptoms) has been very dry
+    - I've had [heart palpitations](symptoms) occasionally
+    - I noticed [swelling](symptoms) on my ankle
+    - I'm having [frequent urination](symptoms)
+    - I've been having [night sweats](symptoms)
+    - [i am feeling sick since a few days](symptoms)
+    - My [muscles](symptoms) feel weak
+    - There's a [sharp pain](symptoms) in my side
+    - I have [fatigue](symptoms) throughout the day
+    - I've been [constipated](symptoms) for days
+    - I've been having [loss of balance](symptoms)
+    - My [legs](symptoms) feel numb
+    - I've been having [frequent headaches](symptoms)
+    - [I have a headache](symptoms)
+    - [I've been experiencing nausea](symptoms)
+    - [Lately, there's been a dizziness](symptoms)
+    - [A constant back pain is troubling me](symptoms)
+    - [I've noticed a recurring stomach ache](symptoms)
+    - [I've had feverish chills on and off](symptoms)
+    - [My throat feels scratchy](symptoms)
+    - [I've been sneezing and have a runny nose](symptoms)
+    - [I have a continuous cough](symptoms)
+    - [There's a tingling sensation in my hands](symptoms)
+    - [My joints have been aching](symptoms)
+    - [I have a rash on my back](symptoms)
+    - [cold from 4 days](symptoms)
+    - [fever from a few days](symptoms)
+    - [My eyes have been itchy](symptoms)
+    - [I've been having breathing difficulties at night](symptoms)
+    - [There's been a constant ringing in my ears](symptoms)
+    - [I've had this nagging pain in my chest](symptoms)
+    - [There's a burning sensation in my feet](symptoms)
+    - [I'm having loss of appetite](symptoms)
+    - [My skin has been very dry](symptoms)
+    - [I've had heart palpitations occasionally](symptoms)
+    - [I noticed swelling on my ankle](symptoms)
+    - [I'm having frequent urination](symptoms)
+    - [I've been having night sweats](symptoms)
+    - [My muscles feel weak](symptoms)
+    - [There's a sharp pain in my side](symptoms)
+    - [I have fatigue throughout the day](symptoms)
+    - [I've been constipated for days](symptoms)
+    - [I've been having loss of balance](symptoms)
+    - [My legs feel numb](symptoms)
+    - [I've been having frequent headaches](symptoms)  
+    - [cold](symptoms) and [cough](symptoms)
+    - [cough](symptoms)
+    - [cold](symptoms)
+    - [vomitting](symptoms)
+    - [diarreha](symptoms)
+    - [headache](symptoms), [cough](symptoms) and [stomach ache](symptoms)           
+    - [vomitting](symptoms) and [diarreha](symptoms)
+    - [diarreha](symptoms) and [vomitting](symptoms)
+    - [cough](symptoms) and [cold](symptoms)
+    - [cough](symptoms) and [stomach ache](symptoms) 
+    - [cold](symptoms) and [headache](symptoms)
+    - [cough](symptoms) and [headache](symptoms)
+    - [headache](symptoms), [cold](symptoms) and [cough](symptoms)
+    - [headache](symptoms), [cold](symptoms) and [cough](symptoms)- Besides the [fever](symptoms), I'm also experiencing a [cold](symptoms).
+    - I have [cold](symptoms)
+    - I have [cough](symptoms) and [body ache](symptoms)
+    - Along with the [fever](symptoms), I have [headaches](symptoms) and [cough](symptoms).
+    - I'm [coughing](symptoms), experiencing a [cold](symptoms), and have a slight [body ache](symptoms).
+    - I have [chills](symptoms) along with the [fever](symptoms).
+    - The [fever](symptoms) is accompanied by [nausea](symptoms) and [vomiting](symptoms).
+    - i have [cold](symptoms)
+    - i have [body ache](symptoms)
+    - Yes, i have [diarrhea](symptoms) also.
+    - Yes, i have [diarrhea](symptoms).
+    - yes, i have [vomitting](symptoms)
+    - I have [diarreha](symptoms).
+    - i have [voitting](symptoms).
+    - Yes, i have both [diarrhea](symptoms) and [vomitting](symptoms)
+    - i am [coughing](symptoms) 
+    - [I'm diligently taking my medications](medication_status)
+    - [No, I haven't been consistent with meds](medication_status)
+    - [I missed my medicine today](medication_status)
+    - [I always take my drugs on time](medication_status)
+    - [Occasionally, I forget my medications](medication_status)
+    - [I've not been on any medications recently](medication_status)
+    - [Yes, I follow the prescription strictly](medication_status)
+    - [I sometimes double up on medication when I feel worse](medication_status)
+    - [I've stopped my medications for a week](medication_status)
+    - [Took my pills this morning](medication_status)
+    - [may be from last week](medication_status)
+    - [I lost my medicine bottle](medication_status)
+    - [Never missed a single dose](medication_status)
+    - [I've been lazy with my medications this month](medication_status)
+    - [I took an extra pill today by mistake](medication_status)
+    - [I'm considering stopping my medications](medication_status)
+    - [occasionally](medication_status)
+    - [I've taken my prescription diligently](medication_status)
+    - [Sometimes I take an extra dose](medication_status)
+    - [I've run out of my medicines](medication_status) 
+    - [Rarely do I forget to take them](medication_status)
+    - [I'm not sure if the medication is working](medication_status)
+    - [Yesterday, I forgot my dose](medication_status)
+    - [I've been consistent with my treatment](medication_status)
+    - [I have a few side effects from the medication](medication_status)
+    - [I took two tablets instead of one](medication_status)
+    - [I've not taken my meds for days](medication_status)
+    - [My prescription is almost over](medication_status)
+    - [I'm thinking of changing my medication](medication_status)
+    - [Last week, I had an overdose](medication_status)
+    - [I haven't picked up my new medication yet](medication_status)
+    - [I'm on a new drug regime](medication_status)   
+    - [This issue has been bothering me for 9 months](medication_status)
+    - [I began feeling this way about a week ago](medication_status)
+    - [The symptoms appeared 3 days back](medication_status)
+    - [It's been 11 days since the pain began](medication_status)
+    - [I've felt like this for roughly 2 hours](medication_status)
+    - [I noticed it 30 minutes ago](medication_status)
+    - [I've had these sensations for around a month](medication_status)
+    - [The problem has persisted for 12 weeks](medication_status)
+    - [It's been 4 days since these symptoms started](medication_status)
+    - [The issue has been there for 9 weeks](medication_status)
+    - [I first felt it 24 hours ago](medication_status)
+    - [I've been facing this for over a year](medication_status)
+    - [The symptoms began 16 days ago](medication_status)
+    - [It started 5 weeks back](medication_status)
+    - [This has been ongoing for 18 days](medication_status)
+    - [It's been bothering me for 3 months](medication_status)
+    - [I've felt this way for 7 months](medication_status)
+    - [The discomfort initiated one week ago](medication_status)
+    - [I've been going through this for 13 days](medication_status)
+    - [Symptoms have been present for 40 days](medication_status)
+    - [from past three or four days](medication_status)
+    - I've been feeling this way for [two days](medication_status).
+    - It started about [a week ago](medication_status).
+    - [a few days now](medication_status)
+    - [from past three or four days](medication_status)
+    - I've had these symptoms for [a couple of hours](medication_status).
+    - This issue has been bothering me for [9 months](medication_status).
+    - I began feeling this way [about a week](medication_status) ago.
+    - The symptoms appeared [3 days](medication_status) back.
+    - [it's been going on for a while now](medication_status)
+    - It's been [11 days](medication_status) since the pain began.
+    - I've felt like this for roughly [2 hours](medication_status).
+    - I noticed it [30 minutes](medication_status) ago.
+    - I've had these sensations for [around a month](medication_status).
+    - The problem has persisted for [12 weeks](medication_status).
+    - It's been [4 days](medication_status) since these symptoms started.
+    - The issue has been there for [9 weeks](medication_status).
+    - I first felt it [24 hours](medication_status) ago.
+    - I've been facing this for [over a year](medication_status).
+    - The symptoms began [16 days](medication_status) ago.
+    - It started [5 weeks](medication_status) back.
+    - This has been ongoing for [18 days](medication_status).
+    - It's been bothering me for [3 months](medication_status).
+    - I've felt this way for [7 months](medication_status).
+    - The discomfort initiated [one week](medication_status) ago.
+    - I've been going through this for [13 days](medication_status).
+    - Symptoms have been present for [40 days](medication_status).
+    - It's been like this for almost [three weeks](medication_status).
+    - The pain began [last month](medication_status).
+    - I first noticed it [yesterday](medication_status).
+    - It's been ongoing for [the past year](medication_status).
+    - I've been experiencing this for [five days straight](medication_status).
+    - It has persisted for [more than a month](medication_status).
+    - I started feeling off [about 10 days ago](medication_status).
+    - I've dealt with this for [six months now](medication_status).
+    - The discomfort began [two weekends ago](medication_status).
+    - These symptoms showed up [four days back](medication_status).
+    - I've been going through this for [the past fortnight](medication_status).
+    - It's been around [a couple of weeks](medication_status).
+    - I've had this pain for [2 days](medication_status).
+    - Symptoms started [5 hours](medication_status) ago.
+    - I've felt like this for [3 weeks](medication_status).
+    - It's been [10 days](medication_status) since it started.
+    - The issue began [4 months](medication_status) ago.
+    - It's been [1 year](medication_status) since I first noticed it.
+    - I've been feeling unwell for the past [7 days](medication_status).
+    - It started roughly [36 hours](medication_status) ago.
+    - I noticed these symptoms around [48 hours](medication_status) ago.
+    - I've had this issue for [15 minutes](medication_status).
+    - The discomfort has been there for [6 weeks](medication_status).
+    - I've experienced these symptoms for [8 months](medication_status).
+    - It's been [20 days](medication_status) now.
+    - The pain started [72 hours](medication_status) ago.
+    - I've been dealing with this for [2.5 weeks](medication_status).     
+    - The symptoms first appeared [about 45 minutes](medication_status) ago.
+    - I felt it for the first time [last night](medication_status).
+    - [Approximately 6 days](medication_status) back, I started feeling this.
+    - I've been dealing with this [since Monday](medication_status).
+    - [Almost 12 hours](medication_status) now.
+    - This has been a concern for [over two weeks](medication_status).
+    - [Ever since last weekend](medication_status) I've felt this.
+    - [since last month](medication_status)
+    - I've had this sensation [since yesterday afternoon](medication_status).
+    - [Just this morning](medication_status), I noticed it.
+    - It's been bothering me for [the last two months](medication_status).
+    - I began experiencing this [roughly 3 months](medication_status) ago.
+    - It's been like this [since the winter began](medication_status).
+    - [A week or so](medication_status) has passed since the symptoms appeared.
+    - This problem started [earlier this month](medication_status).
+    - I've had this feeling for the [past few evenings](medication_status).
+    - I first felt the discomfort [during the summer](medication_status).
+    - The pain has persisted for [around 20 weeks](medication_status).
+    - It began [a few months after my last visit](medication_status).
+    - [Ever since the holiday](medication_status) I've felt off.
+    - [Barely an hour](medication_status) ago, I felt it.
+    - I've been going through this [almost every day](medication_status) for the last month.
+    - [Since last year's end](medication_status) I've been noticing this.
+    - I've felt this way [off and on](medication_status) for a year.
+    - The discomfort began [after the accident two weeks ago](medication_status).
+    - [Every morning for the past month](medication_status) I've felt it.
+    - I noticed the change in my health [around 9 days back](medication_status).
+    - I've been dealing with this [since the spring season](medication_status).
+    - [For the last quarter](medication_status) I've had these symptoms.
+    - It began to manifest [about 50 days ago](medication_status).
+    - [few years now](medication_status)
+    - [do not exactly remember but it's been a long and painful couple of days](medication_status)
+    - [couple of days](medication_status)
+    - [few years](medication_status)
+    - This has been on and off [since September](medication_status).     
+    - [when i travel outside](triggers)
+    - [travelling]
+    - [Loud noises](triggers) worsen my symptoms
+    - [rain, sleep-cycle, mood](triggers)
+    - [sleep cycle](triggers)
+    - [mood](triggers)
+    - [drinking](triggers)
+    - [Stress](triggers) has been a major factor
+    - Eating [sugar](triggers) makes it unbearable
+    - I've observed [coldness](triggers) to be a trigger
+    - [when I do pull ups](triggers)
+    - [pull ups](triggers)
+    - [exercise](triggers)
+    - [Pollen](triggers) causes flare-ups for me
+    - [Dust](triggers) always makes it worse
+    - Being around [pets](triggers) aggravates my condition
+    - Consuming [dairy](triggers) sets it off
+    - [Alcohol](triggers) is a definite trigger for me
+    - I've realized that [caffeine](triggers) is a trigger
+    - [Smoke](triggers) from cigarettes is a major issue
+    - [Bright lights](triggers) intensify my symptoms
+    - Skipping meals and [hunger](triggers) is a problem
+    - Lack of [sleep](triggers) worsens my condition
+    - [Exercise](triggers) can sometimes cause flare-ups
+    - [Heavy meals](triggers) are problematic for me
+    - I've found [fried foods](triggers) to be a trigger
+    - [Perfumes](triggers) trigger my allergies
+    - [Loud music](triggers) gives me a headache
+    - [Heat](triggers) tends to make my symptoms worse
+    - [Air conditioning](triggers) is also a problem
+    - [Spicy foods](triggers) exacerbate my issues
+    - [Chemicals](triggers) in cleaning products are triggers
+    - [Physical exertion](triggers) can set it off
+    - [Exposure to sun](triggers) irritates my skin
+    - [there are a lot](triggers)
+    - [can't have a count](triggers)
+    - Drinking [soda](triggers) makes my stomach upset
+    - [Artificial sweeteners](triggers) are a definite problem
+    - [Preservatives](triggers) in food bother me
+    - [Red meat](triggers) has been causing reactions
+    - [Pollution](triggers) aggravates my respiratory issues  
+    - [Gluten](triggers) causes my stomach to act up.
+    - My skin gets irritated with [laundry detergents](triggers).
+    - [MSG](triggers) in food gives me migraines.
+    - [Feather pillows](triggers) give me allergies.
+    - [Peanuts](triggers) cause an allergic reaction.
+    - [Shellfish](triggers) sends me to the hospital.
+    - [Chocolates](triggers) intensify my headaches.
+    - [Latex](triggers) products give me rashes.
+    - [Dehydration](triggers) causes my migraines.
+    - [Wine](triggers) makes me flushed and dizzy.
+    - [Aged cheeses](triggers) are a no-go for me.
+    - [Yeast](triggers) in baked goods is problematic.
+    - [Citrus fruits](triggers) give me acid reflux.
+    - [Fluorescent lighting](triggers) bothers my eyes.
+    - [Lack of fresh air](triggers) can be suffocating.
+    - [Aspartame](triggers) causes digestive distress.
+    - [Soy](triggers) has been an issue lately.
+    - [Eggs](triggers) have caused allergic reactions.
+    - [Dyes](triggers) in candy and cakes upset my stomach.
+    - [Direct contact with metals](triggers) like nickel gives me rashes.
+    - [Raw onions](triggers) have become problematic.
+    - [yes, after drinking](triggers)
+    - [yes, after drinking cold water](triggers)
+    - [Rapid weather changes](triggers) flare up my joint pain.
+    - [Strong emotions](triggers) like anger intensify my symptoms.
+    - [Elevated altitudes](triggers) make me dizzy.
+    - [Overworking](triggers) without breaks makes my pain worse.
+    - [Certain medications](triggers) cause side effects.
+    - [Crowded spaces](triggers) make me anxious.
+    - [Long screen hours](triggers) strain my eyes.
+    - [Humidity](triggers) worsens my skin condition.
+    - [Chlorinated water](triggers) in pools irritates my eyes.
+    - [this gets worse when i eat cold food](triggers)
+    - [cold stuff](triggers)
+    - [when i drink cold water](triggers)
+    - [I've recently switched to a vegetarian diet.](lifestyle_changes)
+    - [running](lifestyle_changes)
+    - [Not much, just started working from home this month.](lifestyle_changes)
+    - [yeah recenty i have travelled a lot](lifestyle_changes)
+    - [I've been exercising more frequently in the past few weeks.](lifestyle_changes)
+    - [I started jogging every morning last month.](lifestyle_changes)
+    - [I've cut out dairy from my diet recently.](lifestyle_changes)
+    - [Not much, just reduced caffeine intake.](lifestyle_changes)
+    - [I've been traveling a lot for work lately.](lifestyle_changes)
+    - [Switched to a night-shift job last week.](lifestyle_changes)
+    - [Started meditation and yoga for stress relief.](lifestyle_changes)
+    - [Jogging](lifestyle_changes)
+    - [started eating more food that contains iron and also i've stopped drinking wine and alcohol](lifestyle_changes)
+    - [travelled a lot](lifestyle_changes)
+    - [Vegetarian](lifestyle_changes)
+    - [No caffeine](lifestyle_changes)
+    - [Travelling]
+    - [Night-shift](lifestyle_changes)
+    - [Yoga](lifestyle_changes)
+    - [Moved](lifestyle_changes)
+    - [Fasting](lifestyle_changes)
+    - [i've been pretty outgoing lately](lifestyle_changes)
+    - [Quit smoking](lifestyle_changes)
+    - [not really except that I have started a low caloric diet than earlier as i am trying to lose weight](lifestyle_changes)
+    - [i have shifted a lot the past few days](lifestyle_changes)
+    - [i have moved a lot since the last month](lifestyle_changes)
+    - [Keto](lifestyle_changes)
+    - [Hiking](lifestyle_changes)
+    - [Swimming](lifestyle_changes)
+    - [Sleep-deprived](lifestyle_changes)
+    - [Dancing](lifestyle_changes)
+    - [Healthier diet](lifestyle_changes)
+    - [Moved to a new city a couple of months ago.](lifestyle_changes)
+    - [i've started going to my office](lifestyle_changes)
+    - [I've been following intermittent fasting for weight loss.](lifestyle_changes)
+    - [I stopped smoking three weeks ago.](lifestyle_changes)
+    - [Recently, I've been on a strict keto diet.](lifestyle_changes)
+    - [Been spending more time outdoors hiking and camping.](lifestyle_changes)
+    - [I've taken up swimming as a regular exercise.](lifestyle_changes)
+    - [I've been sleeping less due to project deadlines.](lifestyle_changes)
+    - [Started attending dance classes for fun.](lifestyle_changes)
+    - [I've incorporated more fruits and veggies into my meals.](lifestyle_changes) 
+    - [I've been walking 10,000 steps daily for a challenge.](lifestyle_changes)
+    - [Took up a new sport – badminton.](lifestyle_changes)
+    - [Started a vegan diet.](lifestyle_changes)
+    - [I've been cycling to work.](lifestyle_changes)
+    - [I joined a gym two months ago.](lifestyle_changes)
+    - [Decided to go gluten-free recently.](lifestyle_changes)
+    - [I've stopped consuming alcohol for the past month.](lifestyle_changes)
+    - [Been practicing mindfulness exercises daily.](lifestyle_changes)
+    - [Adopted a pet which makes me more active at home.](lifestyle_changes)
+    - [Started taking vitamins and supplements.](lifestyle_changes)
+    - [I've been doing pilates twice a week.](lifestyle_changes)
+    - [Switched to decaf.](lifestyle_changes)
+    - [Joined a reading club and have reduced screen time.](lifestyle_changes)
+    - [I've limited my sugar intake recently.](lifestyle_changes)
+    - [Been following a paleo diet.](lifestyle_changes)
+    - [Got into rock climbing.](lifestyle_changes)
+    - [Reduced my meat consumption, now eating meat only once a week.](lifestyle_changes)
+    - [I've been gardening a lot lately.](lifestyle_changes)
+    - [Started drinking green tea instead of coffee.](lifestyle_changes)
+    - [I've adopted a minimalist lifestyle.](lifestyle_changes)
+    - [Took up Tai Chi classes.](lifestyle_changes)
+    - [Started a raw food diet.](lifestyle_changes)
+    - [I now do a digital detox every weekend.](lifestyle_changes)
+    - [I've been volunteering on weekends which keeps me quite active.](lifestyle_changes)
+    - [Switched to an organic diet.](lifestyle_changes)
+    - [Started water aerobics classes.](lifestyle_changes)
+    - [I've cut out processed foods from my diet.](lifestyle_changes)
+    - [Started attending Zumba sessions.](lifestyle_changes)
+    - [I've been focusing on mental health with regular therapy.](lifestyle_changes)
+    - [Reduced my carb intake significantly.](lifestyle_changes)
+    - [Got a standing desk for work.](lifestyle_changes)
+    - [yes , recently a lot of changes in my sleeping habit and eating pattern](lifestyle_changes)
+    - [sleeping pattern](lifestyle_changes)
+    - [eating habits](lifestyle_changes)
+    - [i've started jogging](lifestyle_changes)
+    - [Doctor](consultation)
+    - [GP](consultation)
+    - [Specialist](consultation)
+    - [Nurse](consultation)
+    - [Online](consultation)
+    - [Dermatologist](consultation)
+    - [Physiotherapist](consultation)
+    - [Awaiting results](consultation)
+    - [didn't think it was necessary](consultation)
+    - [Allergies](consultation)
+    - [Stress](consultation)
+    - [Bronchitis](consultation)
+    - [Viral](consultation)
+    - [Telehealth](consultation)      
+    - [yeah i had just gone to a clinic](consultation)
+    - [family doctor](consultation)
+    - [yeah with a family doctor](consultation)
+    - [i had a online consultancy](consultation)
+    - [online consultant](consultation)
+    - [Yes, I've consulted my doctor and he said it's a viral infection.](consultation)
+    - [No, I haven't seen any healthcare professional yet.](consultation)
+    - [I saw a specialist last week who diagnosed it as bronchitis.](consultation)
+    - [I discussed with my GP, and she thinks it's just stress.](consultation)
+    - [Yes, I visited the hospital, and they ran some tests. Awaiting results.](consultation)
+    - [I spoke with a nurse practitioner who said it might be an allergic reaction.](consultation)
+    - [No, I haven't, but I'm planning to see someone next week.](consultation)
+    - [I did a telehealth session, and they recommended some rest.](consultation)
+    - [I consulted online, and it's said to be flu.](consultation)
+    - [Saw a physician recently who suspects it could be due to my diet.](consultation)
+    - [No, but I did a self-assessment online.](consultation)
+    - [Yes, and they think it's anxiety-related.](consultation)
+    - [I'm scheduled to see a specialist about it tomorrow.](consultation)
+    - [Met with a dermatologist who said it might be eczema.](consultation)
+    - [Yes, it's been diagnosed as GERD.](consultation)
+    - [Haven't yet, but my physiotherapist gave some advice.](consultation)
+    - [No professional consultations, just some pharmacy advice.](consultation)
+    - [Spoke with a cardiologist, awaiting some test results.](consultation)
+    - [Went to a chiropractor recently for back issues.](consultation)
+    - [Had a session with a nutritionist who suggested some dietary changes.](consultation)
+    - [Went to an ophthalmologist for my eye issues.](consultation)
+    - [Had a chat with an online therapist.](consultation)
+    - [Yes, and they ran a blood test.](consultation)
+    - [Saw an endocrinologist about potential thyroid issues.](consultation)
+    - [Had a teleconsultation with an ENT specialist.](consultation)
+    - [Got advice from a pediatrician for my child's health.](consultation)
+    - [Yes, I went to an urgent care center over the weekend.](consultation)
+    - [Saw a podiatrist for my foot pain.](consultation)
+    - [I went to a clinic; they said it's probably sinusitis.](consultation)
+    - [Consulted a psychiatrist about my mood swings.](consultation)
+    - [My orthodontist said it's related to my braces adjustment.](consultation)
+    - [Had an X-ray done, the radiologist will discuss the findings soon.](consultation)
+    - [Saw a rheumatologist for my joint pain.](consultation)
+    - [Yes, met with a gynecologist recently.](consultation)
+    - [Had a virtual consultation with a psychologist.](consultation)
+    - [Got some tests done at a diagnostic center; they'll call with results.](consultation)
+    - [Visited an orthopedic surgeon about my knee pain.](consultation)
+    - [The pharmacist suggested an over-the-counter medicine.](consultation)
+    - [Had a brief chat with a dietician about nutrition.](consultation)
+    - [My dentist suspects it might be a cavity.](consultation)
+    - [no just my friends and coworkers](consultation)
+    - [Consulted an audiologist for my hearing issue.](consultation)
+    - [Went to a sleep clinic for my insomnia.](consultation)
+    - [Visited an oncologist; they're running more tests.](consultation)
+    - [Had an ECG done at the cardiology department.](consultation)
+    - [self medicine](consultation)
+    - [My trainer at the gym gave some advice, but I'll see a doctor too.](consultation)
+    - [Had a chat with a neurologist about frequent headaches.](consultation)
+    - [Yes, my acupuncturist gave some insights, but I'll see a GP too.](consultation)
+    - [Went to a pulmonologist due to my shortness of breath.](consultation)
+    - [My mother had similar symptoms, might be hereditary.](medical_history)
+    - [I've had asthma since I was a child.](medical_history)
+    - [No pre-existing conditions or family history related to this.](medical_history)
+    - [My dad had diabetes, and I'm worried about that.](medical_history)
+    - [I underwent surgery for a hernia last year.](medical_history)
+    - [I've been diagnosed with thyroid issues in the past.](medical_history)
+    - [my family is full of patients](medical_history)
+    - [I've had recurrent bouts of tonsillitis as a kid.](medical_history)
+    - [There's a history of arthritis in my family.](medical_history)
+    - [I suffered from chickenpox when I was ten.](medical_history)
+    - [Diabetes](medical_history)
+    - [tuberculosis](medical_history)
+    - [Surgery](medical_history)
+    - [Thyroid](medical_history)
+    - [Tonsillitis](medical_history)
+    - [Arthritis](medical_history)
+    - [Chickenpox](medical_history)
+    - [Depression](medical_history)
+    - [Fractures](medical_history)
+    - [Alzheimer's](medical_history)
+    - [Dengue](medical_history)
+    - [Anemia](medical_history)
+    - [Hypertension](medical_history)
+    - [PCOS](medical_history)
+    - [Pneumonia](medical_history)
+    - [pnuemonia, used to take drugs](medical_history)
+    - [pnuemonia](medical_history)
+    - [Gluten intolerance](medical_history)
+    - [discovered recently about my parents' diabtetic conditions](medical_history)
+    - [Been treated for depression during my college years.](medical_history)
+    - [I've had two fractures in the past five years.](medical_history)
+    - [My grandmother had Alzheimer's, which is a concern for me.](medical_history)
+    - [I was hospitalized for dengue fever three years back.](medical_history)
+    - [I have a history of anemia and take iron supplements.](medical_history)
+    - [Both my parents have high blood pressure.](medical_history)
+    - [I've been diagnosed with PCOS in my early twenties.](medical_history)
+    - [Had a bout of pneumonia when I was younger.](medical_history)
+    - [My sister has similar symptoms due to gluten intolerance.](medical_history)
+    - [I had mumps during my childhood.](medical_history)
+    - [i'm getting nausea everyday](medical_history)
+    - [stomache, everyday](medical_history)
+    - [I was diagnosed with osteoporosis two years ago.](medical_history)
+    - [I've had allergic reactions to certain medications in the past.](medical_history)
+    - [There's a history of breast cancer on my mother's side.](medical_history)
+    - [I suffered from a major concussion in high school.](medical_history)
+    - [I've been on medication for bipolar disorder for a decade.](medical_history)
+    - [I was born with a congenital heart defect.](medical_history)
+    - [Had gallstones and underwent gallbladder removal.](medical_history)
+    - [I've been managing my Crohn's disease for several years.](medical_history)
+    - [I've had frequent migraines since my teenage years.](medical_history)
+    - [My brother was diagnosed with muscular dystrophy.](medical_history)
+    - [Had cataract surgery in my right eye last year.](medical_history)
+    - [I've been receiving treatment for rheumatoid arthritis.](medical_history)
+    - [There's a family history of Parkinson's disease.](medical_history)
+    - [I've been diagnosed with chronic kidney disease stage 3.](medical_history)
+    - [Had a severe bout of tuberculosis in my twenties.](medical_history)
+    - [My uncle died from a sudden cardiac arrest, so I'm cautious.](medical_history)
+    - [I've dealt with acid reflux and GERD symptoms for years.](medical_history)
+    - [I was treated for Lyme disease after a tick bite a few years back.](medical_history)
+    - [pain in my body for the past few months](medical_history)
+    - [Multiple sclerosis runs in my family.](medical_history)
+    - [I've had persistent back pain due to a slipped disc.](medical_history)
+    - [I've undergone chemotherapy for Hodgkin's lymphoma.](medical_history)
+    - [Have been living with Type 1 diabetes since childhood.](medical_history)
+    - [I had a liver transplant due to cirrhosis.](medical_history)
+    - [no similar history](medical_history)
+    - [My cousin has cystic fibrosis, and I've been tested for it.](medical_history)
+    - [Dealt with postpartum depression after my second child.](medical_history)
+    - [Was diagnosed with lupus after unusual rashes and fatigue.](medical_history)
+    - [My grandfather had early-onset Alzheimer's.](medical_history)
+    - [I'm on anticoagulants due to deep vein thrombosis history.](medical_history)
+    - [I had laser eye surgery to correct myopia last year.](medical_history)  
+    - [I'm currently on antibiotics for this cough.](current_medication)
+    - [No medications at the moment, just some over-the-counter pain relievers.](current_medication)
+    - [I've been prescribed some antihistamines for my allergies.](current_medication)
+    - [Taking antacids for the heartburn.](current_medication)
+    - [Just some vitamin supplements.](current_medication)
+    - [I'm using a prescription cream for the skin irritation.](current_medication)
+    - [No, but I've been using a lot of herbal remedies.](current_medication)
+    - [Yes, some pills for blood pressure.](current_medication)
+    - [Been using an inhaler for the shortness of breath.](current_medication)
+    - [Only homeopathic treatments currently.](current_medication)
+    - [I got some ointments and painkillers.](current_medication)
+    - [I've started insulin shots recently.](current_medication)
+    - [Antibiotics](current_medication)
+    - [yes, im taking antibiotics](current_medication)
+    - [Painkillers](current_medication)
+    - [Antihistamines](current_medication)
+    - [Vitamins](current_medication)
+    - [Cream](current_medication)
+    - [Homeopathy](current_medication)
+    - [Inhaler](current_medication)
+    - [im taking cheston cold from last 2 days](current_medication)
+    - [cheston cold](current_medication)
+    - [[im taking vicks from last week](current_medication)
+    - [[im taking meds since last two days](current_medication)
+    - [Insulin](current_medication)
+    - [Steroids](current_medication)
+    - [Antifungals](current_medication)
+    - [Antidepressants](current_medication)
+    - [Nasal spray](current_medication)
+    - [Muscle relaxants](current_medication)
+    - [a few different meds](current_medication)
+    - [Been on antifungals for a foot infection.](current_medication)
+    - [Taking antidepressants for a few months now.](current_medication)
+    - [Using a nasal spray for my sinus issues.](current_medication)
+    - [Been prescribed a course of steroids.](current_medication)
+    - [On some muscle relaxants for back pain.](current_medication)
+    - [Taking pain meds for migraines.](current_medication)
+    - i am taking [Dolo](current_medication)
+    - yes, i have taken [dolo](current_medication)
+    - [cough syrup](current_medication)
+    - yes, i have taken [paracetamol](current_medication)
+    - Yes i'm taking [Crocin](current_medication) from past 2 days.
+    - Yes i'm taking [dolo 650](current_medication) from past 4 days.
+    - i am taking [Dolo 650](current_medication) 
+    - i took [dolo 650](current_medication)  
+    - i took [vicks tablet](current_medication)  
+    - i took [vicks action 500](current_medication) 
+    - I'm taking [paracetamol](current_medication)                      
+    - Yes, I take [medication for my asthma](current_medication) 
+    - I'm on a [prescription for my heart condition](current_medication)                             
+    - Currently, I'm using [medication to manage my diabetes](current_medication)
+    - I have a [prescription for my allergies](current_medication)
+    - I'm taking [meds for my chronic pain](current_medication)
+    - Yes, I'm on [medication to control my cholesterol](current_medication) 
+    - I'm using [medication to treat my anxiety](current_medication)
+    - I am taking my [diabetes tablets](current_medication)
+    - i take [insulin injection](current_medication) daily
+    - I take [sleeping pills](current_medication)
+    - i take [Gastic-plus](current_medication) for my gastric problem
+    - I'm taking [medicine for gastric](current_medication) problem
+    - I take [medicine for thyroid](current_medication) issue
+    - I took [Crocin](current_medication) yesterday
+    - [Dolo 650](current_medication)
+    - [Paracetamol](current_medication)
+    - [BP tablets](current_medication)
+    - [yes, i'm taking birth control pills](current_medication)
+    - [Crocin](current_medication)
+    - [yup went for surgery but it was 5 years back now as of nothing](current_medication)
+    - [surgery](current_medication)
+    - i have taken [pain killer](current_medication) today
+    - i have taken my [BP tablets](current_medication) and  [Dolo](current_medication)
+    - [I've been using eye drops for the dryness.](current_medication)
+    - [I've been taking iron supplements for anemia.](current_medication)
+    - [I take birth control pills daily.](current_medication)
+    - [Only on my thyroid medication.](current_medication)
+    - [Been taking statins to control my cholesterol.](current_medication)
+    - [Taking mood stabilizers for bipolar disorder.](current_medication)
+    - [I'm on a calcium channel blocker for hypertension.](current_medication)
+    - [Currently on anticoagulants post-surgery.](current_medication)
+    - [pills](current_medication)
+    - [I use a medicated shampoo for dandruff.](current_medication)
+    - [Yes, I'm taking antiretroviral medications.](current_medication)
+    - [Been prescribed diuretics to reduce water retention.](current_medication)
+    - [I take beta-blockers for my heart palpitations.](current_medication)
+    - [Been applying a corticosteroid ointment for the rash.](current_medication)
+    - [Currently on oral rehydration salts for dehydration.](current_medication)
+    - [I'm using a medicated mouthwash for gum inflammation.](current_medication)
+    - [Been on mood stabilizers for my mood swings.](current_medication)
+    - [I'm taking anti-seizure medications.](current_medication)
+    - [I use laxatives occasionally due to constipation.](current_medication)
+    - [I'm on hormone replacement therapy.](current_medication)
+    - [Yes, I take melatonin for sleep irregularities.](current_medication)
+    - [Currently on oral steroids for an autoimmune condition.](current_medication)
+    - [Been taking meds for acid reflux for a while now.](current_medication)
+    - [I'm using ear drops for an ear infection.](current_medication)
+    - [I'm on antivirals for herpes.](current_medication)
+    - [Been on calcium supplements post my bone fracture.](current_medication)
+    - [Taking antipsychotics as prescribed by my psychiatrist.](current_medication)
+    - [I apply sunscreen medicated for sensitive skin.](current_medication)
+    - [I take fish oil capsules for omega-3.](current_medication)
+    - [Been using a nasal decongestant due to a cold.](current_medication)
+    - [I'm on contraceptives.](current_medication)
+    - [There's been a lot of construction dust around my place recently.](environmental_factors)
+    - [I recently moved to a more polluted area, could be due to that.](environmental_factors)
+    - [We've had a mold issue in our home which might be a factor.](environmental_factors)
+    - [We recently had a pest control treatment at home.](environmental_factors)
+    - [I've noticed increased pollution levels in my area.](environmental_factors)
+    - [There's been a gas leak in my neighborhood last week.](environmental_factors)
+    - [I live close to a factory, and sometimes there's a strange smell.](environmental_factors)
+    - [been a little dusty around the house](environmental_factors)
+    - [My office building is quite old and has poor ventilation.](environmental_factors)
+    - [We had water damage recently, and I suspect mold growth.](environmental_factors)
+    - [I've been exposed to secondhand smoke at my friend's place.](environmental_factors)
+    - [There's been continuous loud construction noise nearby.](environmental_factors)
+    - [sometime weather change and sometimes late sleeping habbit](environmental_factors)
+    - [Pesticides](environmental_factors)
+    - [Pollution](environmental_factors)
+    - [Gas leak](environmental_factors)
+    - [Factory](environmental_factors)
+    - [yes, it's raining](environmental_factors)
+    - [Old building](environmental_factors)
+    - [Mold](environmental_factors)
+    - [Secondhand smoke](environmental_factors)
+    - [Construction](environmental_factors)
+    - [Detergent](environmental_factors)
+    - [Pet](environmental_factors)
+    - [Pollen](environmental_factors)
+    - [Farm](environmental_factors)
+    - [Pesticides](environmental_factors)
+    - [cold weather]
+    - [weather change]
+    - [Dirty pool](environmental_factors)
+    - [Smog](environmental_factors)
+    - [I started using a new laundry detergent last month.](environmental_factors)
+    - [I recently got a new pet, and I'm adjusting to it.](environmental_factors)
+    - [The pollen count has been high in my city this spring.](environmental_factors)
+    - [I visited a farm and was exposed to a lot of animals.](environmental_factors)
+    - [My neighbor's been spraying a lot of pesticides in their garden.](environmental_factors)
+    - [I've been swimming in a public pool which seemed unclean.](environmental_factors)
+    - [There's been a lot of forest fires causing smog recently.](environmental_factors)
+    - [There's a new highway construction nearby, maybe it's the pollution.](environmental_factors)
+    - [I traveled to a high-altitude area last month.](environmental_factors)
+    - [I've been spending time near a farm with lots of pesticide use.](environmental_factors)
+    - [There's been a landfill site near my house causing a stench.](environmental_factors)
+    - [My new job location is near a chemical plant.](environmental_factors)
+    - [Been experiencing a heatwave in my city lately.](environmental_factors)
+    - [I live by the beach and have been experiencing high humidity.](environmental_factors)
+    - [My neighborhood recently got fumigated for mosquitoes.](environmental_factors)
+    - [yes, weather is not so good](environmental_factors)
+    - [A lot of trees were cut down in my locality recently.](environmental_factors)
+    - [I've been in contact with animals at a local zoo.](environmental_factors)
+    - [I recently painted my house and the fumes were intense.](environmental_factors)
+    - [Road tar](environmental_factors)
+    - [House paint](environmental_factors)
+    - [Wild animal contact](environmental_factors)
+    - [Chemical waste dump](environmental_factors)
+    - [Acid rain](environmental_factors)
+    - [Exposed to asbestos in an old building.](environmental_factors)
+    - [I've been camping in a forest with lots of insects.](environmental_factors)
+    - [Exposure to a chemical spill on the highway last week.](environmental_factors)
+    - [My home's heater emits a strange odor when switched on.](environmental_factors)
+    - [there's been a lot of rain my area recently](environmental_factors)
+    - [A lot of cars have been idling near my home lately.](environmental_factors)
+    - [Been exposed to UV rays during my beach vacation.](environmental_factors)
+    - [Stagnant water](environmental_factors)
+    - [Insecticides](environmental_factors)
+    - [dust]
+    - [dusty]
+    - [heavy snow](environmental_factors)
+    - [snow](environmental_factors)
+    - [heavy rain]
+    - [down pour](environmental_factors)
+    - [windy](environmental_factors)
+    - [I visited a volcanic region with strong sulfur odors.](environmental_factors)
+    - [Exposed to radioactive materials during a lab visit.](environmental_factors)
+    - [There's a coal plant near my place, causing ash fallouts.](environmental_factors)
+    - [I've been working in a mine and exposed to various minerals.](environmental_factors)
+    - [A sewage line broke near my house last month.](environmental_factors)
+    - [There have been chemical discharges into the river nearby.](environmental_factors)
+    - Doctor should know about my [feeling dizzy](additional_info) 
+    - I've had [sleepless nights](additional_info) recently
+    - We have a history of [diabetes](additional_info) in the family
+    - I underwent a [surgery](additional_info) on my left knee recently
+    - Important for the doctor to know my [allergies](additional_info)
+    - My [blood pressure](additional_info) has been fluctuating
+    - I've started a new [exercise regimen](additional_info) 
+    - My [diet](additional_info) has drastically changed in the past month
+    - There's been a recent [injury](additional_info) to my foot
+    - I've been having [vision issues](additional_info) lately
+    - I've started some over-the-counter [supplements](additional_info)
+    - There's been a change in my [weight](additional_info)
+    - I have been under significant [work-related stress](additional_info)
+    - My [travel history](additional_info) might be of interest
+    - I've had [chest pains](additional_info) a few times this month
+    - I had a [blood transfusion](additional_info) last year
+    - There's a history of [cancer](additional_info) in the family
+    - I recently got a [tattoo](additional_info) on my arm
+    - I have a [pacemaker](additional_info) installed
+    - My [cholesterol levels](additional_info) are high
+    - I've had a [bone fracture](additional_info) before
+    - I've been diagnosed with [vitamin deficiency](additional_info)
+    - My [hydration](additional_info) levels have been low
+    - I've been exposed to [toxic chemicals](additional_info) at work
+    - I've started using a new [skin cream](additional_info)
+    - My [alcohol consumption](additional_info) has increased
+    - There's been a change in my [menstrual cycle](additional_info)
+    - I've had [seizures](additional_info) in the past
+    - I recently had a [CT scan](additional_info)
+    - I've been recommended for [therapy](additional_info) sessions
+    - My doctor should be informed about [feeling dizzy](additional_info).
+    - Recently, I've been experiencing [sleepless nights](additional_info).
+    - It's worth noting there's a family history of [diabetes](additional_info).
+    - Just so you know, I had a [surgery](additional_info) on my left knee recently.
+    - I'd like the doctor to be aware of my [allergies](additional_info).
+    - Lately, my [blood pressure](additional_info) has shown fluctuations.
+    - I have taken up a new [exercise regimen](additional_info) recently.
+    - Over the last month, there's been a significant change in my [diet](additional_info).
+    - I sustained an [injury](additional_info) to my foot recently.
+    - I've been facing some [vision issues](additional_info) lately.
+    - I've incorporated some over-the-counter [supplements](additional_info) into my routine.
+    - There has been a noticeable change in my [weight](additional_info) recently.
+    - I'm going through a lot of [work-related stress](additional_info) at the moment.
+    - I believe my [travel history](additional_info) might be relevant for the doctor.
+    - I've felt [chest pains](additional_info) on several occasions this month.
+    - Last year, I had to undergo a [blood transfusion](additional_info).
+    - We have a family history of [cancer](additional_info).
+    - I recently got a [tattoo](additional_info) done on my arm.
+    - I have a [pacemaker](additional_info) fitted in my body.
+    - I received a report that my [cholesterol levels](additional_info) are high.
+    - In the past, I had a [bone fracture](additional_info).
+    - My doctor diagnosed me with [vitamin deficiency](additional_info).
+    - I've noticed that my [hydration](additional_info) levels aren't great.
+    - At my job, I've been exposed to [toxic chemicals](additional_info).
+    - I've recently started using a new [skin cream](additional_info).
+    - My [alcohol consumption](additional_info) has gone up in recent times.
+    - I've observed changes in my [menstrual cycle](additional_info) lately.
+    - I should mention I've had [seizures](additional_info) in the past.
+    - I underwent a [CT scan](additional_info) not too long ago.
+    - I've been suggested to attend [therapy](additional_info) sessions by a professional.
+- intent: inform
+  examples: |
+    - yes
+    - I think so
+    - I guess
+    - definitely
+    - always

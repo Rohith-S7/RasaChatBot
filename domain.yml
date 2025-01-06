@@ -1,0 +1,148 @@
+version: '3.1'
+intents:
+- greet
+- inform
+- affirm
+- stop
+- exit
+- out_of_context
+- deny
+- inform_symptoms
+- inform_medication_status
+- inform_lifestyle_changes
+- inform_consultation
+- inform_medical_history
+- inform_current_medication
+- inform_environmental_factors
+- submit_medical_form
+entities:
+- deny
+- symptoms
+- medication_status
+- triggers
+- lifestyle_changes
+- consultation
+- medical_history
+- current_medication
+- environmental_factors
+- additional_info
+slots:
+  symptoms:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: medical_check_form
+          requested_slot: symptoms
+  medication_status:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: medical_check_form
+          requested_slot: medication_status
+  triggers:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: medical_check_form
+          requested_slot: triggers
+  lifestyle_changes:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: medical_check_form
+          requested_slot: lifestyle_changes
+  consultation:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: medical_check_form
+          requested_slot: consultation
+  medical_history:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: medical_check_form
+          requested_slot: medical_history
+  current_medication:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: medical_check_form
+          requested_slot: current_medication
+  environmental_factors:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: medical_check_form
+          requested_slot: environmental_factors
+  additional_info:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: medical_check_form
+          requested_slot: additional_info
+forms:
+  medical_check_form:
+    required_slots:
+      - symptoms
+      - medication_status
+      - triggers
+      - lifestyle_changes
+      - consultation
+      - medical_history
+      - current_medication
+      - environmental_factors
+      - additional_info
+responses:
+  utter_ask_symptoms:
+  - text: Hello there, I'm a  Health Bot here to asssist you with your problems. What specific symptoms or problems are you experiencing? Please describe them in detail.
+  utter_ask_medication_status:
+  - text: Can you tell me from how long have you been experiencing these symptoms?
+  utter_ask_triggers:
+  - text: Are there any specific situations which you have noticed that usually worsen your symptoms?
+  utter_ask_lifestyle_changes:
+  - text: Have you experienced any changes in your lifestyle, diet, or routine recently that might be relevant?
+  utter_ask_consultation:
+  - text: Have you consulted a healthcare professional about these symptoms? If yes, what was the diagnosis or opinion?
+  utter_ask_medical_history:
+  - text: Do you have any pre-existing medical conditions or a family history of similar issue?
+  utter_ask_current_medication:
+  - text: Are you currently taking any medications or undergoing any treatments related to these problems?
+  utter_ask_environmental_factors:
+  - text: Are there any external environmental factors that you think might be contributing to your symptoms?
+  utter_ask_additional_info:
+  - text: Is there any additional information you would like to share regarding your symptoms or medical history?
+  utter_medical_form_submit:
+  - text: Thank you for the information. I've recorded your answers.
+  utter_out_of_scope:
+  - text: Sorry, I can't handle that request.
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+actions:
+- validate_medical_check_form
+- action_check_deny
+- action_handle_oos
+- action_reset_slots
+- action_save_conversation
+- action_restart_conversation
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,21 @@
+{
+  "lookup": {
+    "rules": {},
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"medical_form\"}, \"prev_action\": {\"action_name\": \"medical_form\"}, \"slots\": {\"age\": [1.0]}, \"user\": {\"entities\": [\"age\"], \"intent\": \"inform_age\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"medical_form\"}, \"prev_action\": {\"action_name\": \"medical_form\"}, \"slots\": {\"symptom\": [1.0]}, \"user\": {\"entities\": [\"symptom\"], \"intent\": \"inform_medical_issue\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"medical_form\"}, \"prev_action\": {\"action_name\": \"medical_form\"}, \"slots\": {\"advice\": [1.0]}, \"user\": {\"entities\": [\"advice\"], \"intent\": \"inform_advice\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"medical_form\"}, \"prev_action\": {\"action_name\": \"utter_submit\"}, \"slots\": {\"advice\": [1.0]}, \"user\": {\"intent\": \"affirm\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"utter_submit\"}}, {\"active_loop\": {\"name\": \"medical_form\"}, \"prev_action\": {\"action_name\": \"utter_slots_values\"}, \"slots\": {\"advice\": [1.0]}, \"user\": {\"intent\": \"affirm\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"medical_form\"}, \"prev_action\": {\"action_name\": \"medical_form\"}, \"slots\": {\"medication\": [1.0]}, \"user\": {\"entities\": [\"medication\"], \"intent\": \"inform_medication\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "predicting default action with intent restart",
+      "predicting default action with intent session_start",
+      "predicting default action with intent back",
+      "handling active loops and forms - medical_form"
+    ]
+  }
+}

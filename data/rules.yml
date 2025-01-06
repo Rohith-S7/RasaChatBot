@@ -1,0 +1,30 @@
+version: "3.1"
+
+rules:
+- rule: Ask the user to rephrase whenever they send a message out of context
+  steps:
+  - intent: out_of_context
+  - action: utter_out_of_scope
+- rule: Ask the user to rephrase whenever there is NLU fallback
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+- rule: Greet then Activate Medical Check Form
+  steps:
+  - intent: greet
+  - action: medical_check_form
+- rule: Activate Medical Check Form with Intent
+  condition:
+  - active_loop: medical_check_form
+  steps:
+  - intent: submit_medical_form
+  - action: medical_check_form
+- rule: Exit and Restart Conversation
+  steps:
+  - intent: exit
+  - action: action_restart_conversation
+- rule: Save Conversation and Stop
+  steps:
+  - intent: stop
+  - action: action_save_conversation
+
